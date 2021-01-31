@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Number counter</title>
+	<title>Change the background Color</title>
 </head>
 <body>
-	<!--Main-->
-<form name="MainForm" class="Main" onsubmit="return false">
-	<input type="button" name="OneLess" value="Lower Count" onclick="minusNum()">
-	<input type="text" name="num" value="0" id="M" style="text-align: center;font-family: Rockwell;font-size: 25px;">
-	<input type="button" name="OneMore" value="Higher Count" onclick="addNum()">
-</form>
-	<!--Javascript-->
-<script type="text/javascript">
-	function addNum(){
-		var number = Number(document.MainForm.num.value);
-		var result = number + 1;
-		document.MainForm.num.value=result;
-	}
-	function minusNum(){
-		var Minusnum = Number(document.MainForm.num.value);
-		var res = Minusnum - 1;
-		document.MainForm.num.value=res;
-		if(Minusnum=="Hello"){
-			Minusnum = "Don't Disturb";
-		}
-	}
-</script>
-	<!--Styling-->
-<style type="text/css">
-    body{
-    	background-color: pink;
-    }
-    .Main{
-    	margin-top: 250px;
-    	margin-left: 400px;
 
-    }
+	<!--Heading-->
+
+    <h1 id="head">Background Color changer</h1>
+
+	<!---Main-->
+
+<input type="button" id="red" onclick="document.body.style.backgroundColor = 'red'" value="Change background color to red"> <br>
+<hr>
+<input type="button" name="blue" id="blue" value="Change background color to blue" onclick="document.body.style.backgroundColor = 'blue'"><br>
+<hr>
+<input type="button" name="pink" id="pink" value="Change background color to pink" onclick="document.body.style.backgroundColor = 'pink'"><br>
+<hr>
+<input type="button" name="yellow" id="yellow" value="Change background color to yellow" onclick="document.body.style.backgroundColor = 'yellow'">
+<hr>
+<input type="button" id="n" value="Change to normal" onclick="document.body.style.backgroundColor = 'transparent'">
+<hr>
+
+   <!--Styling-->
+
+<style type="text/css">
+	body{
+		background-color: transparent;
+	}
+	#head{
+		text-align: center;
+		font-family: arial,sans-serif;
+	}
+	#red{
+		margin-top: 250px;
+		width: 1350px;
+	}
+	#blue{
+		width: 1350px;
+	}
+	#pink{
+		width: 1350px;
+	}
+	#yellow{
+		width: 1350px
+	}
+	#n{
+	    width: 1350px;
+	}
+
+     
+   
 </style>
 </body>
 </html>
